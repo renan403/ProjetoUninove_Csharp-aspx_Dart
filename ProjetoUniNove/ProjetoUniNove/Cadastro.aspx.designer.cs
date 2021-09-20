@@ -11,7 +11,7 @@ namespace ProjetoUniNove
 {
 
 
-    public partial class WebForm1
+    public partial class Cadastro
     {
 
         /// <summary>
@@ -22,6 +22,15 @@ namespace ProjetoUniNove
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+
+        /// <summary>
+        /// Controle txtNome.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNome;
 
         /// <summary>
         /// Controle txtEmail.
@@ -42,13 +51,13 @@ namespace ProjetoUniNove
         protected global::System.Web.UI.WebControls.TextBox txtSenha;
 
         /// <summary>
-        /// Controle LinkEscSenha.
+        /// Controle txtConfSenha.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkEscSenha;
+        protected global::System.Web.UI.WebControls.TextBox txtConfSenha;
 
         /// <summary>
         /// Controle lblError.
@@ -60,21 +69,12 @@ namespace ProjetoUniNove
         protected global::System.Web.UI.WebControls.Label lblError;
 
         /// <summary>
-        /// Controle btnVer.
+        /// Controle btnCad.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnVer;
-
-        /// <summary>
-        /// Controle LinkCad.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkCad;
+        protected global::System.Web.UI.WebControls.Button btnCad;
     }
 }

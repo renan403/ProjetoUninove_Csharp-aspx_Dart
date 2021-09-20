@@ -9,16 +9,16 @@ namespace ProjetoUniNove
   // db = System.Configuration.ConfigurationManager.ConnectionStrings
     public class DataBase
     {
-        String mensagem = "";
+        String mensagem="";
         public bool tem = false;
         SqlCommand cmd = new SqlCommand();
         Conexao con = new Conexao();
         SqlDataReader dr;
-        public bool verificarLogin(String nome, String cpf)
+        public bool verificarLogin(String email, String senha)
         {
-            cmd.CommandText = "select * FROM [ProjetoUninove].[dbo].[cliente] where nome = @nome and cpf = @cpf";
-            cmd.Parameters.AddWithValue("@nome", nome);
-            cmd.Parameters.AddWithValue("@cpf", cpf);
+            cmd.CommandText = "select * FROM [ProjetoUninove].[dbo].[cliente] where email = @email and senha = @senha";
+            cmd.Parameters.AddWithValue("@email", email);
+            cmd.Parameters.AddWithValue("@senha", senha);
             try
             {
                 cmd.Connection = con.conectar();
@@ -27,6 +27,8 @@ namespace ProjetoUniNove
                 {
                     tem = true;
                 }
+                con.desconectar();
+                dr.Close();
             }
             catch (SqlException)
             {
@@ -36,6 +38,29 @@ namespace ProjetoUniNove
 
             return tem;
         }
+        public String cadastrar(String nome, String email, String senha, String cod)
+        {
+            tem = false;
+            cmd.CommandText = "INSERT INTO [ProjetoUninove].[dbo].[cliente] (nome, email, senha,codigo) VALUES(@nome, @email, @senha,@cod) ; ";
+            cmd.Parameters.AddWithValue("@nome", nome);
+            cmd.Parameters.AddWithValue("@email", email);
+            cmd.Parameters.AddWithValue("@senha", senha);
+            cmd.Parameters.AddWithValue("@cod", cod);
+
+            try {
+                
+                cmd.Connection = con.conectar();       
+                cmd.ExecuteNonQuery();
+                con.desconectar();
+                this.mensagem = ("cadastrado com sucesso");
+                tem = true;
+            }
+            catch(SqlException e){
+                this.mensagem= ("Erro ao inserir no Banco de Dados");
+            }
+
+            return mensagem;
+        }
     }
     public class Conexao
     {
@@ -43,7 +68,7 @@ namespace ProjetoUniNove
         public Conexao()
         {
             con.ConnectionString = @"Data Source = renan; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
-           // con.ConnectionString = @"Server=RENAN;Database=ProjetoUninove;User Id=RENAN\renancporto;Password='';";
+            
         }
         public SqlConnection conectar()
         {
@@ -61,5 +86,6 @@ namespace ProjetoUniNove
             }
         }
     }
+    
     
 }

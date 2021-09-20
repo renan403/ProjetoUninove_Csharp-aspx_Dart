@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows.Forms;
 
 namespace ProjetoUniNove
 {
@@ -19,17 +20,24 @@ namespace ProjetoUniNove
             Controle cont = new Controle();
             
             cont.acessar(txtEmail.Text, txtSenha.Text);
-
-            Response.Write(cont.acessar(txtEmail.Text, txtSenha.Text));
             if (cont.tem)
             {
-                Response.Redirect("logado.aspx");
-                Response.Write("foi");
+                Response.Redirect("Logado.aspx");
             }
             else {
-                Response.Write("não foi");
+                lblError.Text= "login ou senha errado";
+                lblError.Visible = true;
             };
                            
+        }         
+protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("TelaRecSenha.aspx");
+        }
+
+        protected void LinkButton2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Cadastro.aspx");
         }
     }
 }

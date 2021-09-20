@@ -53,6 +53,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -67,11 +68,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Cadastro.aspx" />
+    <Content Include="CodEmail.aspx" />
     <Content Include="logado.aspx" />
+    <Content Include="TelaRecSenha.aspx" />
+    <Content Include="testes.aspx" />
     <Content Include="Web.config" />
     <Content Include="Login.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cadastro.aspx.cs">
+      <DependentUpon>Cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastro.aspx.designer.cs">
+      <DependentUpon>Cadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CodEmail.aspx.cs">
+      <DependentUpon>CodEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CodEmail.aspx.designer.cs">
+      <DependentUpon>CodEmail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Controle.cs" />
     <Compile Include="DataBase.cs" />
     <Compile Include="Email.cs" />
@@ -89,6 +108,20 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TelaRecSenha.aspx.cs">
+      <DependentUpon>TelaRecSenha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TelaRecSenha.aspx.designer.cs">
+      <DependentUpon>TelaRecSenha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testes.aspx.cs">
+      <DependentUpon>testes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testes.aspx.designer.cs">
+      <DependentUpon>testes.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

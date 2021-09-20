@@ -7,10 +7,11 @@ using System.Text;
 using System.Web;
 
 namespace ProjetoUniNove
-{
+{   
     public class Email
     {
-        static void enviarEmail(String emailDestinatario, String codigo)
+      
+        public void enviarEmail(String emailDestinatario, String codigo)
         {           
             try
             {//                                                    DE                        PARA
@@ -34,6 +35,7 @@ namespace ProjetoUniNove
                 
             }
         }
+        
     } 
 }
 
