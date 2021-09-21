@@ -5,8 +5,7 @@ using System.Linq;
 using System.Web;
 
 namespace ProjetoUniNove
-{ //String db;
-  // db = System.Configuration.ConfigurationManager.ConnectionStrings
+{ 
     public class DataBase
     {
         String mensagem="";
@@ -55,7 +54,7 @@ namespace ProjetoUniNove
                 this.mensagem = ("cadastrado com sucesso");
                 tem = true;
             }
-            catch(SqlException e){
+            catch(SqlException){
                 this.mensagem= ("Erro ao inserir no Banco de Dados");
             }
 

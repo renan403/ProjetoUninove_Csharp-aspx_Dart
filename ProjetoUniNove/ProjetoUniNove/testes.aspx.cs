@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using FireSharp.Config;
+using FireSharp.Response;
+using FireSharp.Interfaces;
 
 namespace ProjetoUniNove
 {
@@ -16,10 +19,13 @@ namespace ProjetoUniNove
 
         protected void Unnamed1_Click(object sender, EventArgs e)
         {
-            Random rand = new Random();
-            int resultado = rand.Next(000000, 999999);
-            lblTesteRand.Text = resultado.ToString();
+            
 
         }
+        IFirebaseConfig ifc = new FirebaseConfig()
+        {
+            AuthSecret = "cMpAqZLOnRIxa3cRl05bnHidcZ1gqyv2pDHixAzB",
+            BasePath = "https://projetouni9-ae8d8-default-rtdb.firebaseio.com/"
+        };
     }
 }

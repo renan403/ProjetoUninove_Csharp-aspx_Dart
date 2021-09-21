@@ -5,72 +5,104 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
+using FireSharp;
+using FireSharp.Config;
+using FireSharp.Interfaces;
+using FireSharp.Response;
+
 
 namespace ProjetoUniNove
 {
     
     public partial class Cadastro : System.Web.UI.Page
     {
-        
+        IFirebaseClient cliente;
+        IFirebaseConfig ifc = new FirebaseConfig() // conexão com banco
+        {
+            AuthSecret = "cMpAqZLOnRIxa3cRl05bnHidcZ1gqyv2pDHixAzB",
+            BasePath = "https://projetouni9-ae8d8-default-rtdb.firebaseio.com/"
+        };
         protected void Page_Load(object sender, EventArgs e)
         {
-
-        }
-
-        protected void btnCad_Click(object sender, EventArgs e)
-        {
-            
-                    String senha = txtSenha.Text;
-            String confSenha = txtConfSenha.Text;
-            String nome = txtNome.Text;
-            String email = txtEmail.Text;
-            Random rand = new Random();
-            int resultado = rand.Next(000000,999999);
-            String cod = resultado.ToString();
-           
-
-
-
-
-            if (senha != "" && nome != "" && email != "")
+            try
             {
-                if (senha != confSenha)
+                cliente = new FirebaseClient(ifc);
+                if (cliente != null)
                 {
-                    lblError.Text = "Senhas não confere";
-                    lblError.Visible = true;
-                }
-                else
-                {
-                    Controle contr = new Controle();
-
-                    String mensagem = contr.cadastrar(nome,email,senha,cod);
-                    if (contr.tem)
-                    {
-                        Controle cont = new Controle();
-                        cont.cadastrar(nome, email, senha,cod);
-
-                        Email exe = new Email();
-                        exe.enviarEmail(email, cod);
-
-                        MessageBox.Show(mensagem, "cadastro", MessageBoxButtons.OK,MessageBoxIcon.Information);
-                        
-                        Response.Redirect("CodEmail.aspx");
-
-                    }
-                    else
-                    {
-                        MessageBox.Show(contr.mensagem);
-
-                    }
-                    
+                    MessageBox.Show("firebase conectado");
                 }
             }
-            else 
-            {      
-                    lblError.Text = "dados em branco";
-                    lblError.Visible = true;              
+            catch
+            {
+                MessageBox.Show("há um problema com a internet");
             }
-
         }
+
+        protected async void btnCad_Click(object sender, EventArgs e)
+        {
+
+                      String senha = txtSenha.Text;
+              String confSenha = txtConfSenha.Text;
+              String nome = txtNome.Text;
+              String email = txtEmail.Text;
+              Random rand = new Random();
+              int result = rand.Next(000000,999999);
+              String cod = result.ToString();
+
+
+
+
+
+              if (senha != "" && nome != "" && email != "")
+              {
+                  if (senha != confSenha)
+                  {
+                      lblError.Text = "Senhas não confere";
+                      lblError.Visible = true;
+                  }
+                  else
+                  {
+                    var data = new Data
+                    {
+                        email = txtEmail.Text,
+                        nome = txtNome.Text,
+                        senha = txtSenha.Text,
+                        codigo = cod,
+                    };
+                    SetResponse response = await cliente.SetAsync("cliente/" + txtNome.Text, data);
+                    Data resultado = response.ResultAs<Data>();
+                    MessageBox.Show("Informação inserida com sucesso", resultado.email);
+
+                    Email exe = new Email();
+                    exe.enviarEmail(email, cod);
+
+                    Response.Redirect("CodEmail.aspx");
+
+                    /*
+                      Controle contr = new Controle();
+                      String mensagem = contr.cadastrar(nome,email,senha,cod);
+                      if (contr.tem)
+                      {
+                          Controle cont = new Controle();
+                          cont.cadastrar(nome, email, senha,cod);
+
+
+                      }
+                      else
+                      {
+                          MessageBox.Show(contr.mensagem);
+
+                      }*/
+
+                }
+              }
+              else 
+              {      
+                      lblError.Text = "dados em branco";
+                      lblError.Visible = true;              
+              }
+            
+        }
+       
     }
 }

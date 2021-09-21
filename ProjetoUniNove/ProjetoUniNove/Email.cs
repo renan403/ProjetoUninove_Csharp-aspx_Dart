@@ -19,7 +19,7 @@ namespace ProjetoUniNove
 
                 mailMessage.Subject = "Confirmação de Email"; //Titulo do E-Mail
                 mailMessage.IsBodyHtml = true;
-                mailMessage.Body = $"<p>Não compartilhe a senha com ninguem</p></br><p>{codigo}</p>"; //Mensagem do E-Mail
+                mailMessage.Body = $"<p>Não compartilhe a senha com ninguem</p></br><h3>{codigo}</h3>"; //Mensagem do E-Mail
                 mailMessage.SubjectEncoding = Encoding.GetEncoding("UTF-8");
                 mailMessage.BodyEncoding = Encoding.GetEncoding("UTF-8");
 

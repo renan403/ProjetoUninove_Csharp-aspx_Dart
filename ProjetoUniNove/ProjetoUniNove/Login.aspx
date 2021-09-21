@@ -85,7 +85,7 @@
           <asp:LinkButton ID="LinkEscSenha" runat="server" ForeColor="#39F4F4" OnClick="LinkButton1_Click">Clique aqui</asp:LinkButton>
             
         </p>
-        <div style="margin-left:45%">
+        <div style="margin-left:41%">
             <asp:Label ID="lblError" runat="server" Text="msgError" EnableTheming="True" ForeColor="Red" Visible="False"></asp:Label>
         </div>
         <br /><br/>

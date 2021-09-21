@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Cadastro.aspx.cs" Inherits="ProjetoUniNove.Cadastro" %>
+﻿<%@ Page Async="true" Language="C#" AutoEventWireup="true" CodeBehind="Cadastro.aspx.cs" Inherits="ProjetoUniNove.Cadastro" %>
 
 <!DOCTYPE html>
 
