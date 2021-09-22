@@ -16,41 +16,38 @@ namespace ProjetoUniNove
     
     public partial class Cadastro : System.Web.UI.Page
     {
-        IFirebaseClient cliente;
+        /*IFirebaseClient cliente;
         IFirebaseConfig ifc = new FirebaseConfig() // conexão com banco
         {
             AuthSecret = "cMpAqZLOnRIxa3cRl05bnHidcZ1gqyv2pDHixAzB",
             BasePath = "https://projetouni9-ae8d8-default-rtdb.firebaseio.com/"
-        };
+        };*/
         protected void Page_Load(object sender, EventArgs e)
         {
-            try
+           /* try
             {
                 cliente = new FirebaseClient(ifc);
                 if (cliente != null)
                 {
-                    MessageBox.Show("firebase conectado");
+                 
                 }
             }
             catch
             {
                 MessageBox.Show("há um problema com a internet");
-            }
+            }*/
         }
 
         protected async void btnCad_Click(object sender, EventArgs e)
         {
 
-                      String senha = txtSenha.Text;
+              String senha = txtSenha.Text;
               String confSenha = txtConfSenha.Text;
               String nome = txtNome.Text;
               String email = txtEmail.Text;
               Random rand = new Random();
               int result = rand.Next(000000,999999);
               String cod = result.ToString();
-
-
-
 
 
               if (senha != "" && nome != "" && email != "")
@@ -61,7 +58,7 @@ namespace ProjetoUniNove
                       lblError.Visible = true;
                   }
                   else
-                  {
+                  {/*
                     var data = new Data
                     {
                         email = txtEmail.Text,
@@ -69,14 +66,26 @@ namespace ProjetoUniNove
                         senha = txtSenha.Text,
                         codigo = cod,
                     };
-                    SetResponse response = await cliente.SetAsync("cliente/" + txtNome.Text, data);
+                    SetResponse response = await cliente.SetAsync("Cliente/" + nome, data);
                     Data resultado = response.ResultAs<Data>();
-                    MessageBox.Show("Informação inserida com sucesso", resultado.email);
+                    MessageBox.Show("Informação inserida com sucesso", resultado.email);*/
 
-                    Email exe = new Email();
-                    exe.enviarEmail(email, cod);
+                    Data data = new Data();
+                    bool resultado =await data.RegisterUser(nome, email, senha, cod);
 
-                    Response.Redirect("CodEmail.aspx");
+                     if (resultado)
+                    {
+                        Email exe = new Email();
+                        exe.enviarEmail(email, cod);
+                        Response.Redirect("CodEmail.aspx");
+                    }
+                    else
+                    {
+                        lblError.Text = "Email ja cadastrado";
+                        lblError.Visible=true;
+                    }
+
+                   
 
                     /*
                       Controle contr = new Controle();

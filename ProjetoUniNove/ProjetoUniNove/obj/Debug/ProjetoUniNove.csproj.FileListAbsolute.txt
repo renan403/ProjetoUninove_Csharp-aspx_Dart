@@ -71,3 +71,9 @@ C:\Uninove\ProjetoQuartoSemestre\Csharp\ProjetoUniNove\ProjetoUniNove\bin\Micros
 C:\Uninove\ProjetoQuartoSemestre\Csharp\ProjetoUniNove\ProjetoUniNove\bin\Newtonsoft.Json.xml
 C:\Uninove\ProjetoQuartoSemestre\Csharp\ProjetoUniNove\ProjetoUniNove\bin\System.Net.Http.Extensions.xml
 C:\Uninove\ProjetoQuartoSemestre\Csharp\ProjetoUniNove\ProjetoUniNove\bin\System.Net.Http.Primitives.xml
+C:\Uninove\ProjetoQuartoSemestre\Csharp\ProjetoUniNove\ProjetoUniNove\bin\Firebase.dll
+C:\Uninove\ProjetoQuartoSemestre\Csharp\ProjetoUniNove\ProjetoUniNove\bin\LiteDB.dll
+C:\Uninove\ProjetoQuartoSemestre\Csharp\ProjetoUniNove\ProjetoUniNove\bin\System.Reactive.dll
+C:\Uninove\ProjetoQuartoSemestre\Csharp\ProjetoUniNove\ProjetoUniNove\bin\Firebase.xml
+C:\Uninove\ProjetoQuartoSemestre\Csharp\ProjetoUniNove\ProjetoUniNove\bin\LiteDB.xml
+C:\Uninove\ProjetoQuartoSemestre\Csharp\ProjetoUniNove\ProjetoUniNove\bin\System.Reactive.xml

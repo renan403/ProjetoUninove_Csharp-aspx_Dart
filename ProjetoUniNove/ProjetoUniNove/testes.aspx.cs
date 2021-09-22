@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using FireSharp.Config;
 using FireSharp.Response;
 using FireSharp.Interfaces;
+using System.Windows.Forms;
 
 namespace ProjetoUniNove
 {
@@ -17,15 +18,16 @@ namespace ProjetoUniNove
 
         }
 
-        protected void Unnamed1_Click(object sender, EventArgs e)
+        protected async void Unnamed1_Click(object sender, EventArgs e)
         {
-            
-
+            bool result;
+            Data data = new Data();
+            result = await data.IsUserExists("renanc@gmail.com");
+            if (result)
+            {
+                MessageBox.Show("email encontrado");
+            }
         }
-        IFirebaseConfig ifc = new FirebaseConfig()
-        {
-            AuthSecret = "cMpAqZLOnRIxa3cRl05bnHidcZ1gqyv2pDHixAzB",
-            BasePath = "https://projetouni9-ae8d8-default-rtdb.firebaseio.com/"
-        };
+        
     }
 }

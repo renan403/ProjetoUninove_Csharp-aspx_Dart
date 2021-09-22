@@ -1,6 +1,6 @@
 ﻿
 
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="testes.aspx.cs" Inherits="ProjetoUniNove.testes" %>
+<%@ Page Async="true" Language="C#" AutoEventWireup="true" CodeBehind="testes.aspx.cs" Inherits="ProjetoUniNove.testes" %>
 
 <!DOCTYPE html>
 
