@@ -11,7 +11,26 @@ namespace ProjetoUniNove
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
 
         }
+        
+
+        protected  void bntEnviar_Click(object sender, EventArgs e)
+        {
+         //   Data data = new Data();
+         //   String email = "renancporto94@gmail.com";
+          //  String cod = txtCod.Text;
+          //  Session["codigo"] = cod;
+          //  Session["email"] = email;
+
+
+            Response.Redirect("testes.aspx");
+
+
+            //bool result = await data.IsUserExists
+
+        }
+        
     }
 }

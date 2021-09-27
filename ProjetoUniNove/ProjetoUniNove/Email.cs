@@ -23,7 +23,7 @@ namespace ProjetoUniNove
                 mailMessage.SubjectEncoding = Encoding.GetEncoding("UTF-8");
                 mailMessage.BodyEncoding = Encoding.GetEncoding("UTF-8");
 
-                SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);
+                SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);// Servidor do Gmail
 
                 smtpClient.UseDefaultCredentials = false;
                 smtpClient.Credentials = new NetworkCredential("projetootchealth@gmail.com", "teste@123");//email que vai enviar para outras pessoas

@@ -13,20 +13,31 @@ namespace ProjetoUniNove
 {
     public partial class testes : System.Web.UI.Page
     {
+        //private string codigo;
+        //private string email;
+
         protected void Page_Load(object sender, EventArgs e)
         {
+           // codigo = (string)Session["codigo"];
+            //email = (string)Session["email"];
 
         }
+     
 
         protected async void Unnamed1_Click(object sender, EventArgs e)
         {
             bool result;
             Data data = new Data();
-            result = await data.IsUserExists("renanc@gmail.com");
+            result = await data.ValidaCod("466532", "admin@admin.com");
             if (result)
             {
-                MessageBox.Show("email encontrado");
+                MessageBox.Show("cod encontrado");
             }
+            else
+            {
+                MessageBox.Show("nao encontrado");
+            }
+
         }
         
     }
