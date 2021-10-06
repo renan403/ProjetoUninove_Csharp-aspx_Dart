@@ -42,6 +42,15 @@ namespace ProjetoUniNove
         protected global::System.Web.UI.WebControls.TextBox txtCod;
 
         /// <summary>
+        /// Controle lblError.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblError;
+
+        /// <summary>
         /// Controle bntEnviar.
         /// </summary>
         /// <remarks>

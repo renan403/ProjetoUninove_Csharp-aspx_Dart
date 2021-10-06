@@ -105,8 +105,11 @@
   <ItemGroup>
     <Content Include="Cadastro.aspx" />
     <Content Include="CodEmail.aspx" />
+    <Content Include="img\download.ico" />
     <Content Include="logado.aspx" />
+    <Content Include="img\mr-robot.ico" />
     <Content Include="TelaRecSenha.aspx" />
+    <Content Include="TelaRecSenhaNova.aspx" />
     <Content Include="testes.aspx" />
     <Content Include="Web.config" />
     <Content Include="Login.aspx" />
@@ -152,6 +155,13 @@
     <Compile Include="TelaRecSenha.aspx.designer.cs">
       <DependentUpon>TelaRecSenha.aspx</DependentUpon>
     </Compile>
+    <Compile Include="TelaRecSenhaNova.aspx.cs">
+      <DependentUpon>TelaRecSenhaNova.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TelaRecSenhaNova.aspx.designer.cs">
+      <DependentUpon>TelaRecSenhaNova.aspx</DependentUpon>
+    </Compile>
     <Compile Include="testes.aspx.cs">
       <DependentUpon>testes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -160,6 +170,7 @@
       <DependentUpon>testes.aspx</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <Compile Include="Validacoes.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

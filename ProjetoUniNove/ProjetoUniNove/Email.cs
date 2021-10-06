@@ -1,18 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Text;
-using System.Web;
 
 namespace ProjetoUniNove
-{   
+{
     public class Email
     {
-      
+
         public void enviarEmail(String emailDestinatario, String codigo)
-        {           
+        {
             try
             {//                                                    DE                        PARA
                 MailMessage mailMessage = new MailMessage("projetootchealth@gmail.com", emailDestinatario);
@@ -32,10 +30,10 @@ namespace ProjetoUniNove
             }
             catch (Exception)
             {
-                
+
             }
         }
-        
-    } 
+
+    }
 }
 

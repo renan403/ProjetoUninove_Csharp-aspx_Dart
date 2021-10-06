@@ -4,13 +4,23 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Recuperar senha</title>
+    <link rel="shortcut icon" type="imagex/png" href="img\mr-robot.ico"/>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-       
+            <p>Email da sua conta</p>
+            Email:
+            <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+            <br />
+            <br />
+            <asp:Label ID="lblError" runat="server" ForeColor="Red" Text="msgError" Visible="False"></asp:Label>
+            <br />
+            <br />
+            <asp:Button ID="btnEnviar" runat="server" Text="Enviar" OnClick="btnEnviar_Click" />
+            <br />
         </div>
     </form>
 </body>

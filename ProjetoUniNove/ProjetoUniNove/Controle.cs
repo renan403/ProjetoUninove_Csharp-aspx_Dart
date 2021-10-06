@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 
 namespace ProjetoUniNove
 {
@@ -15,10 +13,10 @@ namespace ProjetoUniNove
             tem = db.verificarLogin(nome, cpf);
             return tem;
         }
-        public String cadastrar (String nome, String email,String senha, String cod)
+        public String cadastrar(String nome, String email, String senha, String cod)
         {
             DataBase db = new DataBase();
-            this.mensagem = db.cadastrar(nome, email, senha,cod);
+            this.mensagem = db.cadastrar(nome, email, senha, cod);
             if (db.tem)
             {
                 this.tem = true;

@@ -1,21 +1,13 @@
 ﻿using Firebase.Database;
 using Firebase.Database.Query;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace ProjetoUniNove
 {
     internal class Data
     {
-        /*public string email { get; set; }
-        public string nome { get; set; }
-        public string senha { get; set; }
-        public string codigo { get; set; }
-        */
         FirebaseClient client;
         public Data()
         {
@@ -50,7 +42,7 @@ namespace ProjetoUniNove
                 return false;
             }
         }
-        public async Task<bool> LoginUser(string email, string senha,bool ativo )
+        public async Task<bool> LoginUser(string email, string senha, bool ativo)
         {
             var user = (await client.Child("Usuarios").OnceAsync<User>())
                 .Where(u => u.Object.Email == email)
@@ -59,7 +51,7 @@ namespace ProjetoUniNove
                 .FirstOrDefault();
             return (user != null);
         }
-        public async Task<bool> ValidaCod(String cod,String email)
+        public async Task<bool> ValidaCod(String cod, String email)
         {
             var user = (await client.Child("Usuarios/").OnceAsync<User>())
                 .Where(u => u.Object.Codigo == cod)
@@ -69,38 +61,65 @@ namespace ProjetoUniNove
         }
         public async Task<bool> ValidaUser(string email, String cod)
         {
-          
-                //  List<String> Lista = new List<string>();
-                // var userEmail = (await client.Child("Usuarios").OnceAsync<User>()).Where(u => u.Object.Email == email).FirstOrDefault().Object.Email;
-                // Lista.Add(userEmail);
-                // var userCod = (await client.Child("Usuarios").OnceAsync<User>()).Where(u => u.Object.Email == email).FirstOrDefault().Object.Codigo;
-                //  Lista.Add(userCod);
-                var userSenha = (await client.Child("Usuarios").OnceAsync<User>()).Where(u => u.Object.Email == email).FirstOrDefault().Object.Password;
-                // Lista.Add(userSenha);
-                var userName = (await client.Child("Usuarios").OnceAsync<User>()).Where(u => u.Object.Email == email).FirstOrDefault().Object.Username;
-                //  Lista.Add(userName);
-                var chave = (await client.Child("Usuarios").OnceAsync<User>()).Where(u => u.Object.Email == email).FirstOrDefault().Key;
-                // Lista.Add(chave);
+            var userSenha = (await client.Child("Usuarios").OnceAsync<User>()).Where(u => u.Object.Email == email).FirstOrDefault().Object.Password;
+            var userName = (await client.Child("Usuarios").OnceAsync<User>()).Where(u => u.Object.Email == email).FirstOrDefault().Object.Username;
+            var chave = (await client.Child("Usuarios").OnceAsync<User>()).Where(u => u.Object.Email == email).FirstOrDefault().Key;
 
-                await client.Child($"Usuarios/{chave}")
-                        .PatchAsync(new User()
-                        {
-                            Username = userName,
-                            Password = userSenha,
-                            Email = email,
-                            Codigo = cod,
-                            Ativo = true,
-                        });
-                return true;          
+            await client.Child($"Usuarios/{chave}")
+                    .PatchAsync(new User()
+                    {
+                        Username = userName,
+                        Password = userSenha,
+                        Email = email,
+                        Codigo = cod,
+                        Ativo = true,
+                    });
+            return true;
         }
-        public  async Task<bool> DeleteUser()
+        public async Task<bool> DeleteUser(string email, string senha)
         {
-            await client.Child("Usuarios").DeleteAsync();
+            var chave = (await client.Child("Usuarios").OnceAsync<User>()).Where(u => u.Object.Email == email).FirstOrDefault().Key;
+            await client.Child($"Usuarios/{chave}").DeleteAsync();
 
             return true;
         }
-       
+        public async Task<bool> AlterSenha(string email, string senha, string codigo)
+        {
+            var chave = (await client.Child("Usuarios").OnceAsync<User>()).Where(u => u.Object.Email == email).FirstOrDefault().Key;
+
+            var userAtivo = (await client.Child("Usuarios").OnceAsync<User>()).Where(u => u.Object.Email == email).FirstOrDefault().Object.Ativo;
+            var userName = (await client.Child("Usuarios").OnceAsync<User>()).Where(u => u.Object.Email == email).FirstOrDefault().Object.Username;
+            await client.Child($"Usuarios/{chave}")
+                .PutAsync(new User()
+                {
+                    Ativo = userAtivo,
+                    Username = userName,
+                    Password = senha,
+                    Email = email,
+                    Codigo = codigo,
+                });
+            return true;
+
+
+
+        }
+        public async Task<bool> AlterCod(string email, string cod)
+        {
+            var userSenha = (await client.Child("Usuarios").OnceAsync<User>()).Where(u => u.Object.Email == email).FirstOrDefault().Object.Password;
+            var userName = (await client.Child("Usuarios").OnceAsync<User>()).Where(u => u.Object.Email == email).FirstOrDefault().Object.Username;
+            var chave = (await client.Child("Usuarios").OnceAsync<User>()).Where(u => u.Object.Email == email).FirstOrDefault().Key;
+            await client.Child($"Usuarios/{chave}")
+                    .PatchAsync(new User()
+                    {
+                        Username = userName,
+                        Password = userSenha,
+                        Email = email,
+                        Codigo = cod,
+                        Ativo = true,
+                    });
+
+            return true;
+        }
+
     }
-    
-    
 }

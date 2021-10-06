@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Web;
 
 namespace ProjetoUniNove
-{ 
+{
     public class DataBase
     {
-        String mensagem="";
+        String mensagem = string.Empty;
         public bool tem = false;
         SqlCommand cmd = new SqlCommand();
         Conexao con = new Conexao();
@@ -46,16 +44,18 @@ namespace ProjetoUniNove
             cmd.Parameters.AddWithValue("@senha", senha);
             cmd.Parameters.AddWithValue("@cod", cod);
 
-            try {
-                
-                cmd.Connection = con.conectar();       
+            try
+            {
+
+                cmd.Connection = con.conectar();
                 cmd.ExecuteNonQuery();
                 con.desconectar();
                 this.mensagem = ("cadastrado com sucesso");
                 tem = true;
             }
-            catch(SqlException){
-                this.mensagem= ("Erro ao inserir no Banco de Dados");
+            catch (SqlException)
+            {
+                this.mensagem = ("Erro ao inserir no Banco de Dados");
             }
 
             return mensagem;
@@ -67,7 +67,7 @@ namespace ProjetoUniNove
         public Conexao()
         {
             con.ConnectionString = @"Data Source = renan; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
-            
+
         }
         public SqlConnection conectar()
         {
@@ -85,6 +85,6 @@ namespace ProjetoUniNove
             }
         }
     }
-    
-    
+
+
 }
