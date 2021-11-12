@@ -12,12 +12,12 @@ namespace ProjetoUniNove
 
         protected async void btnAlterar_Click(object sender, EventArgs e)
         {
-            if (Validacoes.ValidaSenha(txtSenha.Text) == string.Empty)
+            if (Validacoes.ValidaSenha(Request["txtRecSenha"]) == string.Empty)
             {
-                if (txtConfSenha.Text == txtSenha.Text)
+                if (Request["txtRecConfSenha"] == Request["txtRecSenha"])
                 {
                     Data data = new Data();
-                    bool result = await data.AlterSenha(txtEmail.Text, txtSenha.Text, txtCod.Text);
+                    bool result = await data.AlterSenha(Request["txtRecEmail"], Request["txtRecSenha"], Request["txtRecCod"]);
                     if (result)
                     {
                         Response.Redirect("Login.aspx");
@@ -36,7 +36,7 @@ namespace ProjetoUniNove
             }
             else
             {
-                lblError.Text = Validacoes.ValidaSenha(txtSenha.Text);
+                lblError.Text = Validacoes.ValidaSenha(Request["txtRecSenha"]);
                 lblError.Visible = true;
             }
         }

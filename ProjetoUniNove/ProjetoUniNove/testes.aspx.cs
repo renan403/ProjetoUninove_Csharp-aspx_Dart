@@ -18,25 +18,15 @@ namespace ProjetoUniNove
 
         protected void Page_Load(object sender, EventArgs e)
         {
-           // codigo = (string)Session["codigo"];
-            //email = (string)Session["email"];
-
         }
      
 
         protected async void Unnamed1_Click(object sender, EventArgs e)
         {
-            bool result;
-            Data data = new Data();
-            result = await data.ValidaCod("466532", "admin@admin.com");
-            if (result)
-            {
-                MessageBox.Show("cod encontrado");
-            }
-            else
-            {
-                MessageBox.Show("nao encontrado");
-            }
+
+            string teste = Request["name1"];
+            Data dado = new Data();
+            await dado.PrimeiroAcesso(teste);
 
         }
         

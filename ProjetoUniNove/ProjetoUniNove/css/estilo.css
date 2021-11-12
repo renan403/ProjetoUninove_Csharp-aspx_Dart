@@ -1,0 +1,38 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+html {
+    max-width:auto;
+}
+
+body {
+    background-image: url(https://wallpapercave.com/wp/wp5346443.jpg);
+    background-size: cover;
+    color: white;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.contato1 , .contato2, .contato3{
+    width:3%;  
+    border-radius:50%;
+    margin-left:10px;
+}
+h1{
+    color:blue
+}
+form input{
+    margin-top:5px;
+    padding:5px;
+    border-radius: 20px;
+    width:200px
+}
+div.caixa{
+    margin-top:40%;
+}

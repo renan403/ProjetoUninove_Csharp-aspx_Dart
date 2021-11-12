@@ -11,7 +11,7 @@ namespace ProjetoUniNove
 {
 
 
-    public partial class Cadastro
+    public partial class PrimeiroAcesso
     {
 
         /// <summary>
@@ -24,57 +24,84 @@ namespace ProjetoUniNove
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Controle txtNomeCad.
+        /// Controle checkDiabete.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtNomeCad;
+        protected global::System.Web.UI.WebControls.CheckBox checkDiabete;
 
         /// <summary>
-        /// Controle txtEmailCad.
+        /// Controle checkIntoLactose.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtEmailCad;
+        protected global::System.Web.UI.WebControls.CheckBox checkIntoLactose;
 
         /// <summary>
-        /// Controle txtSenhaCad.
+        /// Controle checkDislipidemia.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtSenhaCad;
+        protected global::System.Web.UI.WebControls.CheckBox checkDislipidemia;
 
         /// <summary>
-        /// Controle txtConfSenhaCad.
+        /// Controle checkConstipação.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtConfSenhaCad;
+        protected global::System.Web.UI.WebControls.CheckBox checkConstipação;
 
         /// <summary>
-        /// Controle lblError.
+        /// Controle checkCeliaca.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblError;
+        protected global::System.Web.UI.WebControls.CheckBox checkCeliaca;
 
         /// <summary>
-        /// Controle btnCad.
+        /// Controle cbSemRestr.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCad;
+        protected global::System.Web.UI.WebControls.CheckBox cbSemRestr;
+
+        /// <summary>
+        /// Controle txtPrimAltura.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtPrimAltura;
+
+        /// <summary>
+        /// Controle txtPrimPeso.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtPrimPeso;
+
+        /// <summary>
+        /// Controle bntSalvar.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button bntSalvar;
     }
 }

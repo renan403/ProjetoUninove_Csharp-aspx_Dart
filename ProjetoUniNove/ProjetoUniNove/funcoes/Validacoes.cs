@@ -16,6 +16,10 @@ namespace ProjetoUniNove
             {
                 return "Senha muito Curta";
             }
+            else if (senha.Length == 0)
+            {
+                return "Campo senha vazio";
+            }
             return string.Empty;
         }
 

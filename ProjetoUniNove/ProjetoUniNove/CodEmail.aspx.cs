@@ -13,12 +13,12 @@ namespace ProjetoUniNove
 
         protected async void bntEnviar_Click(object sender, EventArgs e)
         {
-
+           
             Data data = new Data();
-            bool resultado = await data.ValidaCod(txtCod.Text, txtEmail.Text);
+            bool resultado = await data.ValidaCod(Request["txtConfCod"], Request["txtEmailCodEmail"]);
             if (resultado)
             {
-                bool resp = await data.ValidaUser(txtEmail.Text, txtCod.Text);
+                bool resp = await data.ValidaUser(Request["txtEmailCodEmail"] , Request["txtConfCod"]);
                 if (resp)
                 {
                     Response.Redirect("Login.aspx");

@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Recuperar de Senha</title>
     <link rel="shortcut icon" type="imagex/png" href="img\mr-robot.ico"/>
+    <link rel="stylesheet" href="css/estilo.css" />
 
 </head>
 <body>
@@ -14,17 +15,20 @@
 
         <div>
 
-            Email<br />
-            <asp:TextBox ID="txtEmail" runat="server" TextMode="Email"></asp:TextBox>
+            Email<br />    
+            <input id="txtRecEmail" type="email" placeholder="Digite seu email cadastrado" runat="server"/>
             <br />
             Cod<br />
-            <asp:TextBox ID="txtCod" runat="server"></asp:TextBox>
+            
+            <input id="txtRecCod" type="text" placeholder="Digite o codigo recebido" runat="server"/>
             <br />
             Senha<br />
-            <asp:TextBox ID="txtSenha" runat="server" TextMode="Password"></asp:TextBox>
+            
+            <input id="txtRecSenha" type="password" placeholder="Digite sua nova senha.." runat="server"/>
             <br />
             Confirmar Senha<br />
-            <asp:TextBox ID="txtConfSenha" runat="server" TextMode="Password"></asp:TextBox>
+            
+            <input id="txtRecConfSenha" type="password" placeholder="Confirme a nova senha.." runat="server"/>
             <br />
             <br />
             <asp:Button ID="btnAlterar" runat="server" OnClick="btnAlterar_Click" Text="Alterar" />

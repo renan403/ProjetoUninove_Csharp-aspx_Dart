@@ -30,7 +30,7 @@ namespace ProjetoUniNove
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtEmail;
 
         /// <summary>
         /// Controle txtSenha.
@@ -39,16 +39,7 @@ namespace ProjetoUniNove
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSenha;
-
-        /// <summary>
-        /// Controle LinkEscSenha.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkEscSenha;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtSenha;
 
         /// <summary>
         /// Controle lblError.
@@ -67,6 +58,15 @@ namespace ProjetoUniNove
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnVer;
+
+        /// <summary>
+        /// Controle LinkEscSenha.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkEscSenha;
 
         /// <summary>
         /// Controle LinkCad.

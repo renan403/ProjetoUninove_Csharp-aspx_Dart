@@ -16,11 +16,11 @@ namespace ProjetoUniNove
             Data data = new Data();
             Email email = new Email();
             int aleat = rand.Next(100000, 999999);
-            bool result = await data.IsUserExists(txtEmail.Text);
+            bool result = await data.IsUserExists(Request["txtRecEmail"]);
             if (result)
             {
-                await data.AlterCod(txtEmail.Text, aleat.ToString());
-                email.enviarEmail(txtEmail.Text, aleat.ToString());
+                await data.AlterCod(Request["txtRecEmail"], aleat.ToString());
+                email.EnviarEmail(Request["txtRecEmail"], aleat.ToString());
                 Response.Redirect("TelaRecSenhaNova.aspx");
             }
             else
