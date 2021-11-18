@@ -1,8 +1,11 @@
 ﻿using Firebase.Database;
 using Firebase.Database.Query;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+
 
 namespace ProjetoUniNove
 {
@@ -76,7 +79,7 @@ namespace ProjetoUniNove
                     });
             return true;
         }
-        public async Task<bool> DeleteUser(string email, string senha)
+        public async Task<bool> DeleteUser(string email)
         {
             var chave = (await client.Child("Usuarios").OnceAsync<User>()).Where(u => u.Object.Email == email).FirstOrDefault().Key;
             await client.Child($"Usuarios/{chave}").DeleteAsync();
@@ -148,7 +151,7 @@ namespace ProjetoUniNove
         public async Task<bool> Adiciona(string email, string peso, string semRestr, string diabete, string intoLac, string dispi, string constipacao, string celiaca)
         {         
             var chave = (await client.Child("Usuarios").OnceAsync<User>()).Where(u => u.Object.Email == email).FirstOrDefault().Key;
-           var userEmail = (await client.Child("Usuarios").OnceAsync<User>()).Where(u => u.Object.Email == email).FirstOrDefault().Object.Email;
+            var userEmail = (await client.Child("Usuarios").OnceAsync<User>()).Where(u => u.Object.Email == email).FirstOrDefault().Object.Email;
             await client.Child($"Usuarios/{chave}/Info/")
                     .PutAsync(new User()
                     {  
@@ -163,5 +166,24 @@ namespace ProjetoUniNove
             
             return true;
         }
+        public async Task<string> RetornaImc(string email)
+        {
+            //List<string> resultadoG = new List<string>();
+           // Dictionary<string, string> teste = new Dictionary<string, string>();
+           
+           var chave = (await client.Child("Usuarios").OnceAsync<User>()).Where(u => u.Object.Email == email).FirstOrDefault().Key;
+
+            Funcoes funcao = new Funcoes();
+            string ResultadoPeso = funcao.RetornPeso(chave);
+            return ResultadoPeso;
+        }
+        public async Task<string> RetornaStatus(string email)
+        {
+            var chave = (await client.Child("Usuarios").OnceAsync<User>()).Where(u => u.Object.Email == email).FirstOrDefault().Key;
+            Funcoes funcao = new Funcoes();
+            string status = funcao.RetornaStatus(chave);
+            return status;
+        }
+
     }
 }

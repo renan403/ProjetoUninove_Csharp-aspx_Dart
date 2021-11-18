@@ -21,10 +21,10 @@ namespace ProjetoUniNove
             Funcoes funcao = new Funcoes();
             
             Data data = new Data();
-            await data.PrimeiroAcesso("admin@admin.com");
+            await data.PrimeiroAcesso("admin@admin.com");// ativa o cadastro do user
             
-            bool semRestr = cbSemRestr.Checked;
-            string semRestricao = funcao.ConvertBool(semRestr);
+            bool semRestr = cbSemRestr.Checked; // retorna True se foi marcado;
+            string semRestricao = funcao.ConvertBool(semRestr); // pega o valor acima e converte para 0 ou 1
 
             bool diabete = checkDiabete.Checked;
             string diabet = funcao.ConvertBool(diabete);
@@ -41,7 +41,7 @@ namespace ProjetoUniNove
             bool celiaca = checkCeliaca.Checked;
             string celiac = funcao.ConvertBool(celiaca);
 
-            Funcoes func = new Funcoes();
+            
             double altura = 0, peso = 0;
             try
             {
@@ -59,8 +59,8 @@ namespace ProjetoUniNove
                 {
                     if (peso != 0)
                     {
-                        string resultado = String.Format(@"{0:.00\.00}", func.Imc(peso, altura));
-                        string peso_tratado = resultado.Replace(",", "");
+                        string resultado = String.Format(@"{0:.00\.00}", funcao.Imc(peso, altura));//recebe e transforma o valor double
+                        string peso_tratado = resultado.Replace(",", "");// tira a virgula que fica na frente 
                         await data.Adiciona("admin@admin.com", $"{peso_tratado}", semRestricao, diabet, IntoletanteLactose, dislipidemia, constipa, celiac);
                         Response.Redirect("logado.aspx");
                     }

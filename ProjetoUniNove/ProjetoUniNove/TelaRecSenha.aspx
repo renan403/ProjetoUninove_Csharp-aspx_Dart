@@ -16,6 +16,8 @@
             Email:
              <input id="txtRecEmail" type="text" placeholder="Digite seu email cadastrado" runat="server"/>
             <br />
+            <br/>
+            <p>Já recebeu Email? <asp:LinkButton ID="LinkPularPag" ForeColor="#00FF7F" runat="server" OnClick="LinkPularPag_Click">Clique aqui</asp:LinkButton></p>
             <br />
             <asp:Label ID="lblError" runat="server" ForeColor="Red" Text="msgError" Visible="False"></asp:Label>
             <br />

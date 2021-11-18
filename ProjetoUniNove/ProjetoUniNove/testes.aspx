@@ -23,6 +23,9 @@
             <asp:Button runat="server" Text="Button" OnClick="Unnamed1_Click" />
             <br />
             <input type="text" id="name1" name="nome" placeholder="Digite seu nome.." runat="server"/>
+            <br />
+            <br />
+            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
 
             <br />
             

@@ -12,33 +12,44 @@ namespace ProjetoUniNove
 
         protected async void btnAlterar_Click(object sender, EventArgs e)
         {
-            if (Validacoes.ValidaSenha(Request["txtRecSenha"]) == string.Empty)
+            Data data = new Data();
+            bool resultado = await data.IsUserExists(Request["txtRecEmail"]);
+            if (resultado)
             {
-                if (Request["txtRecConfSenha"] == Request["txtRecSenha"])
+                if (Validacoes.ValidaSenha(Request["txtRecSenha"]) == string.Empty)
                 {
-                    Data data = new Data();
-                    bool result = await data.AlterSenha(Request["txtRecEmail"], Request["txtRecSenha"], Request["txtRecCod"]);
-                    if (result)
+                    if (Request["txtRecConfSenha"] == Request["txtRecSenha"])
                     {
-                        Response.Redirect("Login.aspx");
+
+                        bool result = await data.AlterSenha(Request["txtRecEmail"], Request["txtRecSenha"], Request["txtRecCod"]);
+                        if (result)
+                        {
+                            Response.Redirect("Login.aspx");
+                        }
+                        else
+                        {
+                            lblError.Text = "informação errada";
+                            lblError.Visible = true;
+                        }
                     }
                     else
                     {
-                        lblError.Text = "informação errada";
+                        lblError.Text = "Senha não confere";
                         lblError.Visible = true;
                     }
                 }
                 else
                 {
-                    lblError.Text = "Senha não confere";
+                    lblError.Text = Validacoes.ValidaSenha(Request["txtRecSenha"]);
                     lblError.Visible = true;
                 }
             }
             else
             {
-                lblError.Text = Validacoes.ValidaSenha(Request["txtRecSenha"]);
+                lblError.Text = "Email não encontrado";
                 lblError.Visible = true;
             }
+            
         }
     }
 }

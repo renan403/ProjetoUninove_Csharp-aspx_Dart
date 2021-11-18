@@ -34,7 +34,7 @@
                
                 <input id="txtPrimAltura" type="text" placeholder="Altura exemplo: 1.70 " runat="server"/>
 &nbsp;&nbsp; Peso:&nbsp;
-                 <input id="txtPrimPeso" type="text" placeholder="Peso exemplo: 60 ou 60.80" runat="server"/>
+                 <input id="txtPrimPeso" type="text" placeholder="Peso exemplo: 60.80" runat="server"/>
 
             </p>
             <p>&nbsp;</p>

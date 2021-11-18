@@ -12,10 +12,10 @@ namespace ProjetoUniNove
         }
         protected async void btnEnviar_Click(object sender, EventArgs e)
         {
-            Random rand = new Random();
+            Random rand = new Random(); // classe para dar um numero aleatorio 
             Data data = new Data();
-            Email email = new Email();
-            int aleat = rand.Next(100000, 999999);
+            Email email = new Email(); // classe para utilizar o envio do email 
+            int aleat = rand.Next(100000, 999999); // gera um numero aleatorio de 100000 a 999999 para inserir em cod
             bool result = await data.IsUserExists(Request["txtRecEmail"]);
             if (result)
             {
@@ -25,10 +25,15 @@ namespace ProjetoUniNove
             }
             else
             {
-                lblError.Text = "E-Mail nao encontrado";
+                lblError.Text = "E-Mail não encontrado";
                 lblError.Visible = true;
             }
 
+        }
+
+        protected void LinkPularPag_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("TelaRecSenhaNova.aspx");
         }
     }
 }

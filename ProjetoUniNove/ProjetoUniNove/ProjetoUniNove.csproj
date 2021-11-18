@@ -107,12 +107,20 @@
     <Content Include="CodEmail.aspx" />
     <Content Include="css\Cadastro.css" />
     <Content Include="css\estilo.css" />
+    <Content Include="Exercicio1.aspx" />
+    <Content Include="Exercicio2.aspx">
+      <BrowseToURL>~/Exercicio2.aspx</BrowseToURL>
+    </Content>
+    <Content Include="Exercicio3.aspx" />
+    <Content Include="Exercicio4.aspx" />
+    <Content Include="Exercicio5.aspx" />
+    <Content Include="Exercicio6.aspx" />
     <Content Include="img\download.ico" />
     <Content Include="img\facebook.png" />
     <Content Include="img\instagram.png" />
     <Content Include="img\whatsapp.png" />
-    <Content Include="logado.aspx" />
     <Content Include="img\mr-robot.ico" />
+    <Content Include="Logado.aspx" />
     <Content Include="PrimeiroAcesso.aspx" />
     <Content Include="TelaRecSenha.aspx" />
     <Content Include="TelaRecSenhaNova.aspx" />
@@ -135,17 +143,59 @@
     <Compile Include="CodEmail.aspx.designer.cs">
       <DependentUpon>CodEmail.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Exercicio1.aspx.cs">
+      <DependentUpon>Exercicio1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Exercicio1.aspx.designer.cs">
+      <DependentUpon>Exercicio1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Exercicio2.aspx.cs">
+      <DependentUpon>Exercicio2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Exercicio2.aspx.designer.cs">
+      <DependentUpon>Exercicio2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Exercicio3.aspx.cs">
+      <DependentUpon>Exercicio3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Exercicio3.aspx.designer.cs">
+      <DependentUpon>Exercicio3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Exercicio4.aspx.cs">
+      <DependentUpon>Exercicio4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Exercicio4.aspx.designer.cs">
+      <DependentUpon>Exercicio4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Exercicio5.aspx.cs">
+      <DependentUpon>Exercicio5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Exercicio5.aspx.designer.cs">
+      <DependentUpon>Exercicio5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Exercicio6.aspx.cs">
+      <DependentUpon>Exercicio6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Exercicio6.aspx.designer.cs">
+      <DependentUpon>Exercicio6.aspx</DependentUpon>
+    </Compile>
     <Compile Include="funcoes\Controle.cs" />
     <Compile Include="funcoes\Data.cs" />
     <Compile Include="funcoes\DataBase.cs" />
     <Compile Include="funcoes\Email.cs" />
     <Compile Include="funcoes\Funcoes.cs" />
-    <Compile Include="logado.aspx.cs">
-      <DependentUpon>logado.aspx</DependentUpon>
+    <Compile Include="Logado.aspx.cs">
+      <DependentUpon>Logado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="logado.aspx.designer.cs">
-      <DependentUpon>logado.aspx</DependentUpon>
+    <Compile Include="Logado.aspx.designer.cs">
+      <DependentUpon>Logado.aspx</DependentUpon>
     </Compile>
     <Compile Include="PrimeiroAcesso.aspx.cs">
       <DependentUpon>PrimeiroAcesso.aspx</DependentUpon>
