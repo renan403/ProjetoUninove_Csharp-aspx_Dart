@@ -7,14 +7,17 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Recuperar senha</title>
     <link rel="shortcut icon" type="imagex/png" href="img\mr-robot.ico"/>
+    <link rel="stylesheet" href="css/estilo.css" />
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
             <p>Email da sua conta</p>
             Email:
-            <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+             <input id="txtRecEmail" type="text" placeholder="Digite seu email cadastrado" runat="server"/>
             <br />
+            <br/>
+            <p>Já recebeu Email? <asp:LinkButton ID="LinkPularPag" ForeColor="#00FF7F" runat="server" OnClick="LinkPularPag_Click">Clique aqui</asp:LinkButton></p>
             <br />
             <asp:Label ID="lblError" runat="server" ForeColor="Red" Text="msgError" Visible="False"></asp:Label>
             <br />

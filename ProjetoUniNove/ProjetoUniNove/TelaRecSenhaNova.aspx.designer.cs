@@ -24,40 +24,40 @@ namespace ProjetoUniNove
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Controle txtEmail.
+        /// Controle txtRecEmail.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtRecEmail;
 
         /// <summary>
-        /// Controle txtCod.
+        /// Controle txtRecCod.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCod;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtRecCod;
 
         /// <summary>
-        /// Controle txtSenha.
+        /// Controle txtRecSenha.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSenha;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtRecSenha;
 
         /// <summary>
-        /// Controle txtConfSenha.
+        /// Controle txtRecConfSenha.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtConfSenha;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtRecConfSenha;
 
         /// <summary>
         /// Controle btnAlterar.

@@ -10,17 +10,20 @@ namespace ProjetoUniNove
         protected void Page_Load(object sender, EventArgs e)
         {
 
+
+
         }
 
         protected async void btnCad_Click(object sender, EventArgs e)
         {
+            
             Random rand = new Random();
             int result = rand.Next(000000, 999999);
-            bool ativo = false;
-            String senha = txtSenha.Text;
-            String confSenha = txtConfSenha.Text;
-            String nome = txtNome.Text;
-            String email = txtEmail.Text;
+
+            String senha = Request["txtSenhaCad"];
+            String confSenha = Request["txtConfSenhaCad"]; ;
+            String nome = Request["txtNomeCad"];
+            String email = Request["txtEmailCad"]; ;
             String cod = result.ToString();
 
 
@@ -49,14 +52,18 @@ namespace ProjetoUniNove
                     else
                     {
                         Data data = new Data();
-                        bool resultado = await data.RegisterUser(nome, email, senha, cod, ativo);
+                        bool resultado = await data.RegisterUser(nome, email, senha, cod);
                         if (resultado)
                         {
                             Email exe = new Email();
-                            exe.enviarEmail(email, cod);
+                            exe.EnviarEmail(email, cod);
 
                             //Page.Session.Add("email", email);
-                            Response.Redirect("CodEmail.aspx");
+                            try {
+                                Response.Redirect("CodEmail.aspx");
+                            }
+                            catch { }
+                            
                         }
                         else
                         {
@@ -76,5 +83,6 @@ namespace ProjetoUniNove
 
         }
 
+       
     }
 }

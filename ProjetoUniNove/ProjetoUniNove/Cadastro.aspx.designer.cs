@@ -24,40 +24,40 @@ namespace ProjetoUniNove
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Controle txtNome.
+        /// Controle txtNomeCad.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNome;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtNomeCad;
 
         /// <summary>
-        /// Controle txtEmail.
+        /// Controle txtEmailCad.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtEmailCad;
 
         /// <summary>
-        /// Controle txtSenha.
+        /// Controle txtSenhaCad.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSenha;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtSenhaCad;
 
         /// <summary>
-        /// Controle txtConfSenha.
+        /// Controle txtConfSenhaCad.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtConfSenha;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtConfSenhaCad;
 
         /// <summary>
         /// Controle lblError.
