@@ -24,7 +24,7 @@ namespace ProjetoUniNove
 
                 string respEmail = Request["txtEmail"]; // Pegando informação do input igual faz com textBox
                 Session.Add("email", respEmail); // Criando sessao para utilizar mais para frente
-                string statu = await data.RetornaStatus(respEmail);//Puxar informação do json que retorna do banco status do primeiro acesso
+                string statu = await data.RetornaStatus(respEmail,"2");//Puxar informação do json que retorna do banco status do primeiro acesso
 
                 
 

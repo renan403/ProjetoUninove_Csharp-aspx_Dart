@@ -18,7 +18,10 @@
         <br />
         <asp:Label ID="lblTeste" runat="server" Text="Label"></asp:Label>
         <br /><br />
-        <asp:Button ID="BtnPerfil" runat="server" Text="Perfil" />
+        <asp:Button ID="BtnPerfil" runat="server" Text="Perfil" OnClick="BtnPerfil_Click" />
+        <br />
+        <br />
+        <asp:Button ID="BtnDietas" runat="server" Text="Dietas" OnClick="BtnDietas_Click" />
     </form>
 </body>
 </html>

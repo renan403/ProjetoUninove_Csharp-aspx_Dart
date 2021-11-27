@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows.Forms;
 
 namespace ProjetoUniNove
 {
@@ -11,12 +12,15 @@ namespace ProjetoUniNove
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-             /*string email = (string)Session["email"];
-             if (email == "" || email == null)
-             {
-                 Response.Redirect("Cadastro.aspx");
-             }*/
-           
+            /*string email = (string)Session["email"];
+            if (email == "" || email == null)
+            {
+                Response.Redirect("Cadastro.aspx");
+            }
+             Data data = new Data();
+             string NomeUser = await data.RetornaStatus("admin@admin.com", "1");
+             */
+
         }
 
         protected async void BtnExercicios_Click(object sender, EventArgs e)
@@ -57,6 +61,32 @@ namespace ProjetoUniNove
 
 
 
+        }
+
+        protected void BtnPerfil_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Perfil.aspx");
+        }
+
+        protected void BtnDietas_Click(object sender, EventArgs e)
+        { Funcoes f = new Funcoes();
+            List<string> result = f.RetornaRestriPeso("-Moi_MkcruKaI7J0D1Tj");
+            Restricoes r = new Restricoes();  
+            string celiaca = result[1],
+                   constipacao = result[2],
+                   dispi = result[3],
+                   semRestr = result[4],
+                   diabete = result[5],
+                   intoLac = result[6];
+            
+                Session.Add("celiaca", celiaca);
+                Session.Add("constipacao", constipacao);         
+                Session.Add("deslipidemia", dispi);         
+                Session.Add("SemRestria", semRestr);          
+                Session.Add("diabete", diabete);            
+                Session.Add("IntoLac", intoLac);           
+                             
+                Response.Redirect("Restricoes.aspx");      
         }
     }
 }

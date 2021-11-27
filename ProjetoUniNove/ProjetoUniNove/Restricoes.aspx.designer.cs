@@ -11,7 +11,7 @@ namespace ProjetoUniNove
 {
 
 
-    public partial class Logado
+    public partial class Restricoes1
     {
 
         /// <summary>
@@ -33,39 +33,39 @@ namespace ProjetoUniNove
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// Controle BtnExercicios.
+        /// Controle Label2.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnExercicios;
+        protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// Controle lblTeste.
+        /// Controle Label3.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTeste;
+        protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// Controle BtnPerfil.
+        /// Controle Label4.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnPerfil;
+        protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
-        /// Controle BtnDietas.
+        /// Controle Label5.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnDietas;
+        protected global::System.Web.UI.WebControls.Label Label5;
     }
 }

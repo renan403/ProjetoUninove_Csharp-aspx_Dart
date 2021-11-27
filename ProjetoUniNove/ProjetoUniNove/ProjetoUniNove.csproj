@@ -121,7 +121,9 @@
     <Content Include="img\whatsapp.png" />
     <Content Include="img\mr-robot.ico" />
     <Content Include="Logado.aspx" />
+    <Content Include="Perfil.aspx" />
     <Content Include="PrimeiroAcesso.aspx" />
+    <Content Include="Restricoes.aspx" />
     <Content Include="TelaRecSenha.aspx" />
     <Content Include="TelaRecSenhaNova.aspx" />
     <Content Include="testes.aspx" />
@@ -143,6 +145,7 @@
     <Compile Include="CodEmail.aspx.designer.cs">
       <DependentUpon>CodEmail.aspx</DependentUpon>
     </Compile>
+    <Compile Include="dietas\Restricoes.cs" />
     <Compile Include="Exercicio1.aspx.cs">
       <DependentUpon>Exercicio1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -197,6 +200,13 @@
     <Compile Include="Logado.aspx.designer.cs">
       <DependentUpon>Logado.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Perfil.aspx.cs">
+      <DependentUpon>Perfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Perfil.aspx.designer.cs">
+      <DependentUpon>Perfil.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PrimeiroAcesso.aspx.cs">
       <DependentUpon>PrimeiroAcesso.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -211,6 +221,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Restricoes.aspx.cs">
+      <DependentUpon>Restricoes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restricoes.aspx.designer.cs">
+      <DependentUpon>Restricoes.aspx</DependentUpon>
     </Compile>
     <Compile Include="TelaRecSenha.aspx.cs">
       <DependentUpon>TelaRecSenha.aspx</DependentUpon>

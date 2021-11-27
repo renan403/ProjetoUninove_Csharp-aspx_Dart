@@ -168,21 +168,39 @@ namespace ProjetoUniNove
         }
         public async Task<string> RetornaImc(string email)
         {
-            //List<string> resultadoG = new List<string>();
+           //List<string> resultadoG = new List<string>();
            // Dictionary<string, string> teste = new Dictionary<string, string>();
            
            var chave = (await client.Child("Usuarios").OnceAsync<User>()).Where(u => u.Object.Email == email).FirstOrDefault().Key;
 
             Funcoes funcao = new Funcoes();
-            string ResultadoPeso = funcao.RetornPeso(chave);
-            return ResultadoPeso;
+            string pesoResp = funcao.RetornaRestriPeso(chave)[0];
+            return pesoResp;
         }
-        public async Task<string> RetornaStatus(string email)
+        public async Task<string> RetornaStatus(string email,string opcao)
         {
             var chave = (await client.Child("Usuarios").OnceAsync<User>()).Where(u => u.Object.Email == email).FirstOrDefault().Key;
             Funcoes funcao = new Funcoes();
-            string status = funcao.RetornaStatus(chave);
-            return status;
+            if (opcao == "0")
+            {
+                string emailResp = funcao.RetornaInfoConta(chave)[0];
+                return emailResp;
+            }
+            else if (opcao == "1")
+            {
+                string usuarioResp = funcao.RetornaInfoConta(chave)[1];
+                return usuarioResp;
+            }
+            else if (opcao == "2")
+            {
+                string acessoResp = funcao.RetornaInfoConta(chave)[2];
+                return acessoResp;
+
+            }
+            else
+            {
+                return "opçao do parametro esta errada";
+            }
         }
 
     }
