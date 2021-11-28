@@ -25,7 +25,7 @@
                 <asp:Label ID="lblError" runat="server" Text="msgError" EnableTheming="True" ForeColor="Red" Visible="False" Font-Bold="True" Font-Italic="False"></asp:Label>
                            
             
-            <asp:Button ID="btnEntrar" runat="server" OnClick="BtnEntrar_Click" Text="Entrar" BackColor="orange" BorderColor="#FF7A00" BorderStyle="None" Font-Bold="False" Font-Overline="False" Font-Size="Medium" />
+            <asp:Button ID="btnEntrar" runat="server" OnClick="BtnEntrar_Click" Text="Entrar" BackColor="#FC9A07" BorderColor="#FF7A00" BorderStyle="None" Font-Bold="False" Font-Overline="False" Font-Size="Medium" />
              
             <p>esquece a senha?<asp:LinkButton ID="LinkEscSenha" runat="server" ForeColor="#00FF7F" OnClick="LinkButton1_Click">Clique aqui</asp:LinkButton></p>
             <p>ainda não possui conta?<asp:LinkButton ID="LinkCad" runat="server" ForeColor="#00FF7F" OnClick="LinkButton2_Click">Clique aqui</asp:LinkButton></p>

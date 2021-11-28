@@ -33,15 +33,6 @@ namespace ProjetoUniNove
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtRecEmail;
 
         /// <summary>
-        /// Controle LinkPularPag.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkPularPag;
-
-        /// <summary>
         /// Controle lblError.
         /// </summary>
         /// <remarks>
@@ -49,6 +40,15 @@ namespace ProjetoUniNove
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblError;
+
+        /// <summary>
+        /// Controle LinkPularPag.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkPularPag;
 
         /// <summary>
         /// Controle btnEnviar.

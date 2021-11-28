@@ -1,0 +1,80 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    max-width: auto;
+}
+
+body {
+    background-color: #171A1B;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+div.caixa1 {
+    margin-left: 30%;
+    background-color: #141514;
+    width: 40%;
+    height: 110%;
+    border: solid;
+    text-align: center;
+    padding-bottom: 20px;
+    border-radius: 10px;
+}
+div.caixa2 {
+    margin-left: 30%;
+    background-color: #141514;
+    width: 40%;
+    height: 110%;
+    border: solid;
+    text-align: center;
+    margin-bottom:10px;
+    border-radius: 10px;
+}
+
+
+.conteudo, p, h4 {
+    color: white;
+}
+p{
+    margin-top:5px;
+    
+}
+
+h4 {
+    color: #FC9A07
+}
+
+header {
+    margin-top: 5%;
+    position: initial;
+    background: #171A1B;
+    width: 110%;
+    height: 20%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+form input {
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 20px;
+    width: 200px
+}
+#btnEnviar {
+    border-radius: 20px;
+    border: none;
+    height: 20px;
+    width: 60px;
+    margin-top: 10px;
+    background-color: #FC9A07;
+}
+#btnAlterar {
+    margin-top: 20px;
+    background-color: #FC9A07;
+    border:none;
+}
+div.caixa2 p {
+    color: #FC9A07
+}

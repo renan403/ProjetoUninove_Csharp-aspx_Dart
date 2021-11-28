@@ -107,8 +107,11 @@
     <Content Include="CodEmail.aspx" />
     <Content Include="css\Cadastro.css" />
     <Content Include="css\estilo.css" />
+    <Content Include="css\Exercicios.css" />
     <Content Include="css\Logado.css" />
     <Content Include="css\Login.css" />
+    <Content Include="css\PrimeiroAcesso.css" />
+    <Content Include="css\RecSenha.css" />
     <Content Include="Exercicio1.aspx" />
     <Content Include="Exercicio2.aspx">
       <BrowseToURL>~/Exercicio2.aspx</BrowseToURL>
