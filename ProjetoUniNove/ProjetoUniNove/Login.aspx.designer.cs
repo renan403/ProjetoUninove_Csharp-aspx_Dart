@@ -24,6 +24,15 @@ namespace ProjetoUniNove
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// Controle titulo.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label titulo;
+
+        /// <summary>
         /// Controle txtEmail.
         /// </summary>
         /// <remarks>
@@ -51,13 +60,13 @@ namespace ProjetoUniNove
         protected global::System.Web.UI.WebControls.Label lblError;
 
         /// <summary>
-        /// Controle btnVer.
+        /// Controle btnEntrar.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnVer;
+        protected global::System.Web.UI.WebControls.Button btnEntrar;
 
         /// <summary>
         /// Controle LinkEscSenha.

@@ -107,6 +107,8 @@
     <Content Include="CodEmail.aspx" />
     <Content Include="css\Cadastro.css" />
     <Content Include="css\estilo.css" />
+    <Content Include="css\Logado.css" />
+    <Content Include="css\Login.css" />
     <Content Include="Exercicio1.aspx" />
     <Content Include="Exercicio2.aspx">
       <BrowseToURL>~/Exercicio2.aspx</BrowseToURL>
@@ -116,10 +118,10 @@
     <Content Include="Exercicio5.aspx" />
     <Content Include="Exercicio6.aspx" />
     <Content Include="img\download.ico" />
-    <Content Include="img\facebook.png" />
-    <Content Include="img\instagram.png" />
-    <Content Include="img\whatsapp.png" />
+    <Content Include="img\facebook1.png" />
+    <Content Include="img\instagram1.png" />
     <Content Include="img\mr-robot.ico" />
+    <Content Include="img\whatsapp1.png" />
     <Content Include="Logado.aspx" />
     <Content Include="Perfil.aspx" />
     <Content Include="PrimeiroAcesso.aspx" />

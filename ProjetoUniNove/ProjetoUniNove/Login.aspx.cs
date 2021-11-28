@@ -15,7 +15,7 @@ namespace ProjetoUniNove
         }
 
 
-        protected async void BtnVer_Click(object sender, EventArgs e)//Entrar para tela Logado
+        protected async void BtnEntrar_Click(object sender, EventArgs e)//Entrar para tela Logado
         {
             Data data = new Data();
             bool result = await data.LoginUser(Request["txtEmail"], Request["txtSenha"], "1"); // verificando se o usuario existe e se esta ativo 1 == true

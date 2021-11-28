@@ -7,7 +7,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link rel="stylesheet" href="css/Cadastro.css" />
+   
     <title></title>
    
     <style>
@@ -18,6 +18,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <asp:ImageButton ID="ImageButton1" runat="server"  ImageUrl="img/jornal.png" />
         <div class="caixa1">
             <asp:Label ID="lblTesteRand" runat="server" Text="resultado"></asp:Label>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

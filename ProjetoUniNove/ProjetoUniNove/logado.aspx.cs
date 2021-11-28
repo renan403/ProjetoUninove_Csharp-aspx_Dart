@@ -10,16 +10,16 @@ namespace ProjetoUniNove
 {
     public partial class Logado : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected async void Page_Load(object sender, EventArgs e)
         {
             /*string email = (string)Session["email"];
             if (email == "" || email == null)
             {
                 Response.Redirect("Cadastro.aspx");
-            }
+            }*/
              Data data = new Data();
              string NomeUser = await data.RetornaStatus("admin@admin.com", "1");
-             */
+             lblNomeUser.Text = NomeUser;
 
         }
 
@@ -71,7 +71,7 @@ namespace ProjetoUniNove
         protected void BtnDietas_Click(object sender, EventArgs e)
         { Funcoes f = new Funcoes();
             List<string> result = f.RetornaRestriPeso("-Moi_MkcruKaI7J0D1Tj");
-            Restricoes r = new Restricoes();  
+             
             string celiaca = result[1],
                    constipacao = result[2],
                    dispi = result[3],

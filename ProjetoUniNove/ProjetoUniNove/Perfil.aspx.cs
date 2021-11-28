@@ -9,7 +9,7 @@ namespace ProjetoUniNove
 {
     public partial class Perfil : System.Web.UI.Page
     {
-        protected async void Page_Load(object sender, EventArgs e)
+        protected void Page_Load(object sender, EventArgs e)
         {
             /* Data data = new Data();
              string email = (string)Session["email"]
