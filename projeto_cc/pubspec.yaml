@@ -31,12 +31,17 @@ dependencies:
     sdk: flutter
   get: #^4.3.8
     git: https://github.com/jonataslaw/getx.git
-  firebase_core: ^1.8.0
-  firebase_auth: ^3.1.4
-  firebase_remote_config: ^0.11.0+2
-  flutter_signin_button: ^2.0.0
-  google_sign_in: ^5.2.0
-
+  firebase_core:
+  firebase_auth:
+  firebase_remote_config:
+  flutter_signin_button:
+  google_sign_in:
+  firebase_database:
+  provider: ^6.0.1
+  http:
+  card_swiper: ^1.0.4
+  calendar_agenda: ^0.0.2+3
+  flutter_admin_scaffold: ^1.0.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -80,8 +85,14 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
+  fonts:
+    - family: JosefinSans
+      fonts:
+        - asset: assets/fonts/JosefinSans/JosefinSans-Regular.ttf
+        - asset: assets/fonts/JosefinSans/JosefinSans-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/JosefinSans/JosefinSans-Bold.ttf
+
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
