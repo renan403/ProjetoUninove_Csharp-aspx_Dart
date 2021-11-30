@@ -72,7 +72,7 @@ C:\Uninove\ProjetoQuartoSemestre\Csharp\ProjetoUniNove\ProjetoUniNove\bin\System
 C:\Uninove\ProjetoQuartoSemestre\Csharp\ProjetoUniNove\ProjetoUniNove\bin\System.Reactive.xml
 C:\Uninove\ProjetoQuartoSemestre\Csharp\ProjetoUniNove\ProjetoUniNove\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Uninove\ProjetoQuartoSemestre\Csharp\ProjetoUniNove\ProjetoUniNove\obj\Debug\ProjetoUniNove.csproj.App.config
+C:\Uninove\ProjetoQuartoSemestre\Csharp\ProjetoUniNove\ProjetoUniNove\obj\Debug\ProjetoUniNove.csproj.AssemblyReference.cache
 C:\Uninove\ProjetoQuartoSemestre\Csharp\ProjetoUniNove\ProjetoUniNove\obj\Debug\ProjetoUniNove.csproj.CoreCompileInputs.cache
 C:\Uninove\ProjetoQuartoSemestre\Csharp\ProjetoUniNove\ProjetoUniNove\obj\Debug\ProjetoUniNove.dll
 C:\Uninove\ProjetoQuartoSemestre\Csharp\ProjetoUniNove\ProjetoUniNove\obj\Debug\ProjetoUniNove.pdb
-C:\Uninove\ProjetoQuartoSemestre\Csharp\ProjetoUniNove\ProjetoUniNove\obj\Debug\ProjetoUniNove.csproj.AssemblyReference.cache

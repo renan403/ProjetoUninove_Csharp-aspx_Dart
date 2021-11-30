@@ -30,13 +30,24 @@ namespace ProjetoUniNove
 
         protected   void Unnamed1_Click(object sender, EventArgs e)
         {
+            // Restricoes res = new Restricoes();
+            //Label1.Text= res.deslipidemia();
 
-            //Data d = new Data();
+            // Data d = new Data();
             //await d.DeleteUser("admin@admin.com");
 
-            //Funcoes f = new Funcoes();
-           // string result = f.RetornaStatus("-Moi_MkcruKaI7J0D1Tj");
-            
+            Funcoes f = new Funcoes();
+            List<string> result = f.RetornaRestriPeso("-Moi_MkcruKaI7J0D1Tj");
+
+            string peso = result[0],
+                   celiaca = result[1],
+                   constipacao = result[2],
+                   dispi = result[3],
+                   semRestr = result[4],
+                   diabete = result[5],
+                   intoLac = result[6];
+
+
         }
         
     }

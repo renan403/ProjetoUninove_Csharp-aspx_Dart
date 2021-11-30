@@ -15,7 +15,7 @@ namespace ProjetoUniNove
         }
 
 
-        protected async void BtnVer_Click(object sender, EventArgs e)//Entrar para tela Logado
+        protected async void BtnEntrar_Click(object sender, EventArgs e)//Entrar para tela Logado
         {
             Data data = new Data();
             bool result = await data.LoginUser(Request["txtEmail"], Request["txtSenha"], "1"); // verificando se o usuario existe e se esta ativo 1 == true
@@ -24,7 +24,7 @@ namespace ProjetoUniNove
 
                 string respEmail = Request["txtEmail"]; // Pegando informação do input igual faz com textBox
                 Session.Add("email", respEmail); // Criando sessao para utilizar mais para frente
-                string statu = await data.RetornaStatus(respEmail);//Puxar informação do json que retorna do banco status do primeiro acesso
+                string statu = await data.RetornaStatus(respEmail,"2");//Puxar informação do json que retorna do banco status do primeiro acesso
 
                 
 
