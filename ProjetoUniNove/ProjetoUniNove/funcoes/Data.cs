@@ -14,7 +14,7 @@ namespace ProjetoUniNove
         readonly FirebaseClient client;
         public Data()
         {
-            client = new FirebaseClient("https://projetouni9-ae8d8-default-rtdb.firebaseio.com/");
+            client = new FirebaseClient("*url do banco*");// colocar a url do banco
         }
         public async Task<bool> IsUserExists(string email)
         {
