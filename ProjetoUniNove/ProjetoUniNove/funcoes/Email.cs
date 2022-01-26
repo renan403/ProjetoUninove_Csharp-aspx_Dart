@@ -25,7 +25,7 @@ namespace ProjetoUniNove
                 SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587)
                 {
                     UseDefaultCredentials = false,
-                    Credentials = new NetworkCredential("projetootchealth@gmail.com", "teste@123"),//email que vai enviar para outras pessoas
+                    Credentials = new NetworkCredential("*seu email*", "*sua senha*"),//email que vai enviar para outras pessoas
                     EnableSsl = true
                 };// Servidor do Gmail
                 smtpClient.Send(mailMessage);
