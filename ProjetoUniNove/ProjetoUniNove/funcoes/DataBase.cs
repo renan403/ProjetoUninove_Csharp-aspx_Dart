@@ -2,7 +2,7 @@
 using System.Data.SqlClient;
 using System.Linq;
 
-namespace ProjetoUniNove
+namespace ProjetoUniNove // por questão de praticidade esse banco foi trocado pelo firebase
 {
     public class DataBase
     {
@@ -66,7 +66,7 @@ namespace ProjetoUniNove
         SqlConnection con = new SqlConnection();
         public Conexao()
         {
-            con.ConnectionString = @"Data Source = renan; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
+            con.ConnectionString = @"*sua conexão*";
 
         }
         public SqlConnection conectar()
