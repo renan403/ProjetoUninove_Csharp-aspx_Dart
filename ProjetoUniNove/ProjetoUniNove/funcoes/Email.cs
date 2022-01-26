@@ -12,8 +12,8 @@ namespace ProjetoUniNove
         public void EnviarEmail(String emailDestinatario, String codigo)
         {
             try
-            {//                                                    DE                        PARA
-                MailMessage mailMessage = new MailMessage("projetootchealth@gmail.com", emailDestinatario)
+            {//                                                DE              PARA
+                MailMessage mailMessage = new MailMessage("*seu email*", emailDestinatario)
                 {
                     Subject = "Confirmação de Email", //Titulo do E-Mail
                     IsBodyHtml = true,
@@ -22,7 +22,7 @@ namespace ProjetoUniNove
                     BodyEncoding = Encoding.GetEncoding("UTF-8")
                 };
 
-                SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587)
+                SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587)// verificar no seu email a porta smtp correspondende a ele
                 {
                     UseDefaultCredentials = false,
                     Credentials = new NetworkCredential("*seu email*", "*sua senha*"),//email que vai enviar para outras pessoas
